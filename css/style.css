@@ -1,0 +1,382 @@
+/* =========================================================
+   GLOBAL VARIABLES
+   Define color palette, fonts, and typography scale
+========================================================= */
+:root {
+  --black--: #151515;
+  --black-grey--: #242424;
+  --grey--: #d9d9d9;
+  --white--: #ffffff;
+  --green--: #4ee1a0;
+  --red--: #ff6f5b;
+
+  --my-font-family--: "Space Grotesk", sans-serif;
+
+  --heading-xl--: 88px;
+  --heading-l--: 48px;
+  --heading-m--: 24px;
+  --body-font-size--: 18px;
+}
+
+/* =========================================================
+   GLOBAL RESET
+   Remove default browser spacing and ensure consistent box sizing
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BASE STYLES
+   Define default font, text color, and background
+========================================================= */
+body,
+html {
+  font-family: var(--my-font-family--);
+  font-size: var(--body-font-size--);
+  color: var(--white--);
+  background-color: var(--black--);
+}
+
+/* Horizontal line spacing */
+hr {
+  margin: 0px 165px;
+}
+.last-hr{
+  background-color:var(--black-grey--);
+}
+/* Headings */
+h2,
+h1 {
+  font-size: var(--heading-xl--);
+}
+
+h3 {
+  font-size: var(--heading-m--);
+  padding: 20px 0px 0px;
+}
+
+/* =========================================================
+   NAVBAR & FOOTER LAYOUT
+========================================================= */
+.navbar,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 165px;
+}
+
+/* Logo text */
+.navbar .logo > a,
+footer .logo > a {
+  font-size: var(--heading-m--);
+  color: var(--white--);
+  text-decoration: none;
+}
+
+/* Social or contact icons */
+.navbar .contact-icons,
+footer .contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+/* Footer background & spacing */
+footer {
+  background-color: var(--black-grey--);
+  padding: 40px 165;
+}
+
+/* =========================================================
+   HERO SECTION
+   Main introduction with background image and profile
+========================================================= */
+.hero {
+  background-image: url("../images/background1.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 165px;
+  margin-bottom: 80px;
+}
+
+/* About me text area */
+.hero .about-me {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 50%;
+}
+
+/* Highlighted name/word underline */
+.hero .about-me h1 > span {
+  border-bottom: #4ee1a0 2px solid;
+}
+
+/* Buttons/Links shared across multiple sections */
+.skip-link,
+.hero .about-me a,
+#my-projects > .project-contact > a,
+.projects .project-card .image-container .overlay-card > a,
+.client-form > button {
+  letter-spacing: 2.29px;
+  line-height: 26px;
+  font-size: 16px;
+  padding: 10px 0px;
+  width: fit-content;
+  text-decoration: none;
+  color: var(--white--);
+  border-bottom: #4ee1a0 2px solid;
+  transition: 0.3s ease;
+}
+
+/* Hover color effect */
+.skip-link:hover,
+.logo > a:hover,
+.hero .about-me a:hover,
+#my-projects > .project-contact > a:hover,
+.projects .project-card .image-container .overlay-card > a:hover,
+.client-form > button:hover {
+  color: var(--green--);
+}
+
+/* Profile image */
+.hero .my-photo {
+  padding: 20px 0px;
+  width: 45%;
+}
+
+.hero .my-photo > img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+/* =========================================================
+    SKILLS SECTION
+========================================================= */
+.skills {
+  background-image: url("../images/background2.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin: 72px 0px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+    PROJECTS SECTION
+========================================================= */
+#my-projects,
+#my-skills {
+  padding: 20px 165px;
+}
+
+/* Header area for projects + contact link */
+#my-projects > .project-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Grid of project cards */
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Individual project card */
+.projects .project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0px;
+  width: 45%;
+  text-transform: uppercase;
+}
+
+/* Image container for overlay effects */
+.projects .project-card .image-container {
+  position: relative;
+}
+
+/* Project image */
+.projects .project-card .image-container > img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* =========================================================
+   OVERLAY EFFECT ON PROJECT IMAGE (on hover)
+   Smooth fade-in overlay with transition
+========================================================= */
+.projects .project-card .image-container .overlay-card {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black--);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  /* Transition setup */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Hover state — overlay fades in */
+.projects .project-card .image-container:hover .overlay-card {
+  opacity: 0.85;
+  visibility: visible;
+}
+
+/* =========================================================
+    CONTACT ME SECTION
+========================================================= */
+#contact-me {
+  background: var(--black-grey--) url("../images/background1.png") no-repeat left
+    bottom;
+  padding: 40px 165px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Contact description text */
+.contact-description {
+  width: 45%;
+  padding: 20px 20px 20px 0px;
+}
+
+/* =========================================================
+    WHATSAPP FLOATING BUTTON
+   Fixed contact icon in bottom corner
+========================================================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 75px;
+  right: 20px;
+  z-index: 100;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* =========================================================
+    CONTACT FORM
+========================================================= */
+.client-form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.visually-hidden {
+  visibility: hidden;
+  }
+/* Inputs and textarea */
+.client-form > input,
+.client-form > textarea,
+.client-form > button {
+  color: var(--white--);
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: #d9d9d9 1px solid;
+}
+
+/* Submit button */
+.client-form > button {
+  border-bottom: #4ee1a0 2px solid;
+  cursor: pointer;
+}
+
+/* =========================================================
+    RESPONSIVE DESIGN (MEDIA QUERIES)
+========================================================= */
+
+/* Tablet */
+@media (max-width: 991px) {
+  .navbar,
+  footer,
+  main.hero,
+  #my-skills,
+  #my-projects,
+  #contact-me {
+    padding: 20px 30px;
+  }
+
+  hr {
+    margin: 0 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar,
+  footer,
+  .hero,
+  #my-skills,
+  #my-projects,
+  #contact-me {
+    padding: 20px 16px;
+  }
+
+  hr {
+    margin: 0 16px;
+  }
+
+  h2,
+  h1 {
+    font-size: var(--heading-l--);
+  }
+
+  /* Stack hero elements vertically */
+  .hero {
+    flex-direction: column-reverse;
+  }
+
+  .hero .about-me {
+    width: 100%;
+  }
+
+  .hero .my-photo {
+    width: 100%;
+  }
+
+  .projects .project-card {
+    width: 100%;
+  }
+
+  .contact-description {
+    width: 100%;
+  }
+
+  .client-form {
+    width: 100%;
+  }
+}
