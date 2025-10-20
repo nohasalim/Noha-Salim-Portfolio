@@ -50,9 +50,9 @@ const myProjects = [
   },
 ];
 function showMyProjects() {
-  (projectsContainer.innerHTML = ""),
-    myProjects.forEach((myproject) => {
-      projectsContainer.innerHTML += `
+  projectsContainer.innerHTML = "";
+  myProjects.forEach((myproject) => {
+    projectsContainer.innerHTML += `
                     <article class="project-card">
                         <div class="image-container">
                             <img src=${myproject.image} alt=${myproject.alt} />
@@ -64,6 +64,6 @@ function showMyProjects() {
                         <h3>${myproject.title}</h3>
                         <p>${myproject.technologies}</p>
                     </article>`;
-    });
+  });
 }
-showMyProjects()
+showMyProjects();
