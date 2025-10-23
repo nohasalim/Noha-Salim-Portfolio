@@ -6,6 +6,7 @@
   --black--: #151515;
   --black-grey--: #242424;
   --grey--: #d9d9d9;
+  --grey-dark--:#8b8a8a;
   --white--: #ffffff;
   --green--: #4ee1a0;
   --red--: #ff6f5b;
@@ -27,11 +28,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* =========================================================
-   BASE STYLES
+  1- DARK MODE
+========================================================= */
+/* =========================================================
+   BASE STYLES 
    Define default font, text color, and background
 ========================================================= */
+
 body,
 html {
   font-family: var(--my-font-family--);
@@ -44,8 +48,8 @@ html {
 hr {
   margin: 0px 165px;
 }
-.last-hr{
-  background-color:var(--black-grey--);
+.last-hr {
+  background-color: var(--black-grey--);
 }
 /* Headings */
 h2,
@@ -85,7 +89,22 @@ footer .contact-icons {
   gap: 20px;
   list-style: none;
 }
+.contact-icons li button,
+.contact-icons li a {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
+.contact-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.1);
+}
 /* Footer background & spacing */
 footer {
   background-color: var(--black-grey--);
@@ -164,10 +183,12 @@ footer {
 /* =========================================================
     SKILLS SECTION
 ========================================================= */
-.skills {
+#my-skills {
   background-image: url("../images/background2.png");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right center;
+}
+.skills {
   margin: 72px 0px;
   display: flex;
   gap: 50px;
@@ -250,8 +271,8 @@ footer {
     CONTACT ME SECTION
 ========================================================= */
 #contact-me {
-  background: var(--black-grey--) url("../images/background1.png") no-repeat left
-    bottom;
+  background: var(--black-grey--) url("../images/background1.png") no-repeat
+    left bottom;
   padding: 40px 165px;
   display: flex;
   flex-wrap: wrap;
@@ -296,7 +317,7 @@ footer {
 }
 .visually-hidden {
   visibility: hidden;
-  }
+}
 /* Inputs and textarea */
 .client-form > input,
 .client-form > textarea,
@@ -313,6 +334,54 @@ footer {
 .client-form > button {
   border-bottom: #4ee1a0 2px solid;
   cursor: pointer;
+}
+/* =========================================================
+    2- LIGHT MODE
+========================================================= */
+body.light-mode,
+html.light-mode {
+  background-color: var(--grey--);
+  color: var(--black--);
+}
+
+body.light-mode footer {
+  background-color: var(--grey-dark--);
+}
+
+body.light-mode #contact-me {
+  background-color: var(--grey-dark--);
+}
+body.light-mode .last-hr {
+  background-color: var(--grey-dark--);
+  color: var(--black-grey--);
+}
+
+/* Buttons/Links shared across multiple sections */
+body.light-mode .skip-link,
+body.light-mode .navbar .logo > a,
+body.light-mode footer .logo > a,
+body.light-mode .hero .about-me a,
+body.light-mode #my-projects > .project-contact > a,
+body.light-mode .client-form > button {
+  color: var(--dark--);
+  transition: 0.3s ease;
+}
+
+/* Hover color effect */
+body.light-mode .skip-link:hover,
+body.light-mode .logo > a:hover,
+body.light-mode .hero .about-me a:hover,
+body.light-mode #my-projects > .project-contact > a:hover,
+body.light-mode .client-form > button:hover {
+  color: var(--black-grey--);
+  font-weight: bold;
+}
+
+/* Inputs and textarea */
+body.light-mode .client-form > input,
+body.light-mode .client-form > textarea {
+  color: var(--black--);
+  border-bottom: var(--black-grey--) 1px solid;
 }
 
 /* =========================================================

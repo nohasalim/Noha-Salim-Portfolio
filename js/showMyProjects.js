@@ -66,4 +66,5 @@ function showMyProjects() {
                     </article>`;
   });
 }
+
 showMyProjects();

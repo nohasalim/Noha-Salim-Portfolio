@@ -8,7 +8,7 @@ const mySkills = [
   { skill_name: "Sass", experience: "1 Year Experience" },
   { skill_name: "Accessibility", experience: "1 Year Experience" },
 ];
-function ShowMySkills() {
+ function ShowMySkills() {
   skillsContainer.innerHTML = "";
   mySkills.forEach((myskill) => {
     skillsContainer.innerHTML += `
@@ -19,3 +19,4 @@ function ShowMySkills() {
   });
 }
 ShowMySkills();
+

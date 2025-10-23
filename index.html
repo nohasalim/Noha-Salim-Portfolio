@@ -25,8 +25,8 @@
 <body>
 
     <!-- Skip link for keyboard users -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
+    <div id="skip-link"><a href="#main-content" class="skip-link">Skip to main content</a>
+</div>
     <!-- Header / Navbar -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <p class="logo">
@@ -35,7 +35,7 @@
         <ul class="contact-icons" aria-label="Social links">
             <li>
                 <a href="https://github.com/nohasalim" target="_blank" aria-label="Visit my GitHub profile">
-                    <img src="icons/akar-icons_github-fill.svg" alt="GitHub logo" />
+                    <img src="icons/github.svg" alt="GitHub logo" />
                 </a>
             </li>
             <li>
@@ -43,6 +43,12 @@
                     aria-label="Visit my LinkedIn profile">
                     <img src="icons/LinkedIn.svg" alt="LinkedIn logo" />
                 </a>
+            </li>
+            <!-- Theme toggle -->
+            <li>
+                <button id="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle theme">
+                    <img src="icons/sun.svg" alt="Light mode icon" id="theme-icon" />
+                </button>
             </li>
         </ul>
     </nav>
@@ -52,7 +58,7 @@
     <main id="main-content" class="hero">
         <div class="about-me">
             <h1>Hello! I’m <span>Noha Salim.</span></h1>
-            <p>I’m a front-end developer passionate about building accessible websites that users love.</p>
+            <p>A front-end developer passionate about building accessible and responsive websites that users love.</p>
 
             <!-- Accessible link text -->
             <a href="assets/Noha-Salim-CV.pdf" target="_blank" aria-label="Open Noha Salim's CV in a new tab">📄 View My
@@ -118,8 +124,8 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
-    <div class="last-hr" >
-        <hr  aria-hidden="true" />
+    <div class="last-hr">
+        <hr aria-hidden="true" />
     </div>
     <!-- Footer -->
     <footer role="contentinfo">
@@ -129,7 +135,7 @@
         <ul class="contact-icons" aria-label="Social links">
             <li>
                 <a href="https://github.com/nohasalim" target="_blank" aria-label="GitHub profile">
-                    <img src="icons/akar-icons_github-fill.svg" alt="GitHub logo" />
+                    <img src="icons/github.svg" alt="GitHub logo" />
                 </a>
             </li>
             <li>
