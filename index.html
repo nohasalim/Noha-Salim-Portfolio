@@ -18,7 +18,7 @@
 
     <!-- External Style -->
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 
 </head>
 
@@ -26,7 +26,7 @@
 
     <!-- Skip link for keyboard users -->
     <div id="skip-link"><a href="#main-content" class="skip-link">Skip to main content</a>
-</div>
+    </div>
     <!-- Header / Navbar -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <p class="logo">
@@ -61,8 +61,9 @@
             <p>A front-end developer passionate about building accessible and responsive websites that users love.</p>
 
             <!-- Accessible link text -->
-            <a href="assets/Noha-Salim-CV.pdf" target="_blank" aria-label="Open Noha Salim's CV in a new tab">📄 View My
-                CV</a>
+            <a href="assets/Noha Salim Frontend Resume.pdf" target="_blank"
+                aria-label="Open Noha Salim's Frontend Resume in a new tab">📄 View My
+                Resume</a>
             <a href="#contact-me">Contact Me</a>
         </div>
 
@@ -77,6 +78,7 @@
     <section id="my-skills" aria-labelledby="skills-title">
         <h2 id="skills-title">Skills</h2>
         <div class="skills">
+            <!-- Each skill card -->
         </div>
 
     </section>
@@ -106,20 +108,22 @@
             <!-- WhatsApp Floating Button -->
             <a href="https://wa.me/201005696033" class="whatsapp-float" target="_blank"
                 aria-label="Chat with me on WhatsApp">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="50" height="50"
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="60" height="60"
                     alt="WhatsApp logo" />
             </a>
         </div>
 
         <form id="contactForm" class="client-form" aria-label="Contact form">
-            <label for="user_name" class="visually-hidden">Your Name</label>
-            <input type="text" id="user_name" name="user_name" placeholder="Name" required />
+            <label for="name" class="visually-hidden">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" required />
 
-            <label for="user_email" class="visually-hidden">Your Email</label>
-            <input type="email" id="user_email" name="user_email" placeholder="Email" required />
+            <label for="email" class="visually-hidden">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required />
+            <label for="title" class="visually-hidden">Message Title</label>
+            <input type="text" id="title" name="title" placeholder="Message Title" required />
 
             <label for="message" class="visually-hidden">Your Message</label>
-            <textarea id="message" name="message" placeholder="Message" rows="7" required></textarea>
+            <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
 
             <button type="submit">Send Message</button>
         </form>
@@ -144,6 +148,7 @@
                     <img src="icons/LinkedIn.svg" alt="LinkedIn logo" />
                 </a>
             </li>
+
         </ul>
     </footer>
 

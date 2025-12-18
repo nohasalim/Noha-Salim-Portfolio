@@ -6,7 +6,7 @@
   --black--: #151515;
   --black-grey--: #242424;
   --grey--: #d9d9d9;
-  --grey-dark--:#8b8a8a;
+  --grey-dark--: #f0ebeb;
   --white--: #ffffff;
   --green--: #4ee1a0;
   --red--: #ff6f5b;
@@ -110,6 +110,14 @@ footer {
   background-color: var(--black-grey--);
   padding: 40px 165;
 }
+.admin-link {
+  font-size: 14px;
+  color: transparent;
+  text-decoration: none;
+}
+.admin-link:hover {
+  color: #666; /* يظهر بس لما تمرري الماوس */
+}
 
 /* =========================================================
    HERO SECTION
@@ -172,7 +180,7 @@ footer {
 /* Profile image */
 .hero .my-photo {
   padding: 20px 0px;
-  width: 45%;
+  width: 35%;
 }
 
 .hero .my-photo > img {
@@ -194,7 +202,15 @@ footer {
   gap: 50px;
   flex-wrap: wrap;
 }
-
+.skill {
+  margin: auto;
+  text-align: center;
+}
+.skill > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
 /* =========================================================
     PROJECTS SECTION
 ========================================================= */
@@ -434,7 +450,7 @@ body.light-mode .client-form > textarea {
   }
 
   .hero .my-photo {
-    width: 100%;
+    width: 80%;
   }
 
   .projects .project-card {

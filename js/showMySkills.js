@@ -1,22 +1,25 @@
 const skillsContainer = document.querySelector(".skills");
-
 const mySkills = [
-  { skill_name: "HTML", experience: "2 Years Experience" },
-  { skill_name: "CSS", experience: "2 Years Experience" },
-  { skill_name: "JavaScript", experience: "2 Years Experience" },
-  { skill_name: "React", experience: "1 Year Experience" },
-  { skill_name: "Sass", experience: "1 Year Experience" },
-  { skill_name: "Accessibility", experience: "1 Year Experience" },
+  { name: "HTML", icon: "../images/html.png" },
+  { name: "CSS", icon: "../images/css.png" },
+  { name: "JavaScript", icon: "../images/js.png" },
+  { name: "React JS", icon: "../images/react.png" },
+  { name: "Tailwind CSS", icon: "../images/tailwindcss.png" },
+  { name: "Accessibility", icon: "../images/accessiblity.png" },
 ];
- function ShowMySkills() {
+
+function showMySkills() {
   skillsContainer.innerHTML = "";
   mySkills.forEach((myskill) => {
-    skillsContainer.innerHTML += `
-            <div id="skill">
-                <h3>${myskill.skill_name}</h3>
-                <p>${myskill.experience}</p>
-            </div>`;
+    skillsContainer.insertAdjacentHTML(
+      "beforeend",
+      `
+            <div class="skill">
+                <img src="${myskill.icon}" alt="${myskill.name} icon " loading="lazy">
+                <h3>${myskill.name}</h3>
+            </div>`
+    );
   });
 }
-ShowMySkills();
-
+// ShowMySkills();
+document.addEventListener("DOMContentLoaded", showMySkills);
