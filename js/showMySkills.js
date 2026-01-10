@@ -4,7 +4,7 @@ const mySkills = [
   { name: "CSS", icon: "../images/css.png" },
   { name: "Bootstrap", icon: "../images/bootstrap.png" },
   { name: "JavaScript", icon: "../images/js.png" },
-  { name: "React JS", icon: "../images/tailwindcss.png" },
+  { name: "React JS", icon: "../images/react.png" },
   { name: "Tailwind CSS", icon: "../images/tailwindcss.png" },
   { name: "Accessibility", icon: "../images/accessiblity.png" },
 ];
