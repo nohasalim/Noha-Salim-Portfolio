@@ -2,8 +2,9 @@ const skillsContainer = document.querySelector(".skills");
 const mySkills = [
   { name: "HTML", icon: "../images/html.png" },
   { name: "CSS", icon: "../images/css.png" },
+  { name: "Bootstrap", icon: "../images/bootstrap.png" },
   { name: "JavaScript", icon: "../images/js.png" },
-  { name: "React JS", icon: "../images/react.png" },
+  { name: "React JS", icon: "../images/tailwindcss.png" },
   { name: "Tailwind CSS", icon: "../images/tailwindcss.png" },
   { name: "Accessibility", icon: "../images/accessiblity.png" },
 ];
