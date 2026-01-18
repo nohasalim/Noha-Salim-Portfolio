@@ -186,6 +186,7 @@ footer {
 .hero .my-photo > img {
   border-radius: 50%;
   width: 100%;
+  height: auto;
 }
 
 /* =========================================================
@@ -208,6 +209,7 @@ footer {
 }
 .skill > img {
   width: 200px;
+  height: auto;
 }
 /* =========================================================
     PROJECTS SECTION
@@ -251,6 +253,7 @@ footer {
 .projects .project-card .image-container > img {
   border-radius: 10px;
   width: 100%;
+  height: auto;
 }
 
 /* =========================================================

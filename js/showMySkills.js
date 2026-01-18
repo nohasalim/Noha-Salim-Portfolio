@@ -15,7 +15,7 @@ function showMySkills() {
       "beforeend",
       `
             <div class="skill">
-                <img src="${myskill.icon}" alt="${myskill.name} icon " loading="lazy">
+                <img src="${myskill.icon}" alt="${myskill.name} icon " loading="lazy" width="200" height="200">
                 <h3>${myskill.name}</h3>
             </div>`,
     );
