@@ -5,8 +5,7 @@ const mySkills = [
   { name: "Bootstrap", icon: "../images/bootstrap.png" },
   { name: "JavaScript", icon: "../images/js.png" },
   { name: "React JS", icon: "../images/react.png" },
-  { name: "Tailwind CSS", icon: "../images/tailwindcss.png" },
-  { name: "Accessibility", icon: "../images/accessiblity.png" },
+  { name: "Tailwind CSS", icon: "../images/tailwindIcon.png" },
 ];
 
 function showMySkills() {
@@ -18,7 +17,7 @@ function showMySkills() {
             <div class="skill">
                 <img src="${myskill.icon}" alt="${myskill.name} icon " loading="lazy">
                 <h3>${myskill.name}</h3>
-            </div>`
+            </div>`,
     );
   });
 }
