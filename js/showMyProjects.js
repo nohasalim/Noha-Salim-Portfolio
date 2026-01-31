@@ -62,7 +62,7 @@ function showMyProjects() {
       `
       <article class="project-card">
         <div class="image-container">
-          <img src="${myproject.image}" alt="${myproject.alt}" loading="lazy" width="600" height="400"/>
+          <img src="${myproject.image}" alt="${myproject.alt}" loading="lazy" width="600" height="400" loading="lazy"/>
           <div class="overlay-card" aria-hidden="true">
             <a href="${myproject.liveUrl}" target="_blank">View Project</a>
             <a href="${myproject.codeUrl}" target="_blank">View Code</a>
